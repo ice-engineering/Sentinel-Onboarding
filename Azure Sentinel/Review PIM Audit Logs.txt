@@ -1,6 +1,0 @@
-// Review Azure PIM Audit Logs on Azure Sentinel
-AuditLogs
-| where LoggedByService contains "PIM"
-| extend PIMResource = tostring(parse_json(TargetResources)[0])
-| extend PIMRole = tostring(parse_json(PIMResource)['displayName'])
-| project Identity, SourceSystem, Category, OperationName, ResultDescription, PIMRole
