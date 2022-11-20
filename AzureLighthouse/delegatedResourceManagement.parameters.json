@@ -1,0 +1,29 @@
+﻿{
+    "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "mspOfferName": {
+            "value": "DEFEND iCE"
+        },
+        "mspOfferDescription": {
+            "value": "Security management services provided by the DEFEND intelligent Cybersecurity Ecosystem"
+        },
+        "managedByTenantId": {
+            "value": "767b86df-35dc-4015-b41c-405455a25d09"
+        },
+        "authorizations": {
+            "value": [
+                {
+                    "principalId": "40775972-65a7-4a57-8d8c-7a6a50a19ca6",
+                    "principalIdDisplayName": "iCE_Administrators_SG",
+                    "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c"
+                },
+{
+                    "principalId": "db39094d-55ed-461f-833a-3297dd79c562",
+                    "principalIdDisplayName": "iCE_Operators_SG",
+                    "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7"
+                }              
+            ]
+        }
+    }
+}
