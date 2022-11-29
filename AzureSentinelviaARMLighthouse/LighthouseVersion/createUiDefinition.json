@@ -293,6 +293,49 @@
                         "visible": true
                     }
                 ]
+            },
+            {
+                "name": "workBooks",
+                "label": "Workbooks",
+                "elements": [{
+                        "name": "textBlock1",
+                        "type": "Microsoft.Common.TextBlock",
+                        "visible": true,
+                        "options": {
+                            "text": "Please select which Workbooks you want to deply into your Azure Sentinel environment",
+                            "link": {
+                                "label": "Learn more",
+                                "uri": "https://www.microsoft.com"
+                            }
+                        }
+                    },
+                    {
+                        "name": "enableCustomWorkbooksKind",
+                        "type": "Microsoft.Common.DropDown",
+                        "label": "Select Workbooks to include in Deployment",
+                        "placeholder": "",
+                        "multiselect": true,
+                        "defaultValue": "o365",
+                        "toolTip": "Select the Custom Workbooks that you would like to enable",
+                        "constraints": {
+                            "allowedValues": [{
+                                    "label": "Reporting",
+                                    "value": "Reporting"
+                                },
+                                {
+                                    "label": "Azure AD Identity Protection Risk Analysis",
+                                    "value": "Azure AD Identity Protection Risk Analysis"
+                                },
+                                {
+                                    "label": "MFA Authentication Analysis",
+                                    "value": "MFA Authentication Analysis"
+                                }
+                            ],
+                            "required": false
+                        },
+                        "visible": true
+                    }
+                ]
             }
         ],
         "outputs": {
@@ -307,6 +350,7 @@
             "dailyQuota": "[basics('dailyQuota')]",
             "dataRetention": "[basics('dataRetention')]",
             "enableDataConnectorsKind": "[steps('dataConnectors').enableDataConnectorsKind]",
+            "enableCustomWorkbooksKind": "[steps('workBooks').enableCustomWorkbooksKind]",
             "securityCollectionTier": "[steps('dataConnectors').securityCollectionTier]",
             "mcasDiscoveryLogs": "[steps('dataConnectors').mcasDiscoveryLogs]",
             "location": "[location()]",
