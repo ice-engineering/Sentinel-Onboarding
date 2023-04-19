@@ -169,7 +169,7 @@
             "metadata": {
                 "description": "The location of resources"
             },
-            "defaultValue": "https://raw.githubusercontent.com/ice-engineering/Sentinel-Onboarding/MergeValidation/"
+            "defaultValue": "https://raw.githubusercontent.com/ice-engineering/Sentinel-Onboarding/master/"
         }
     },
     "variables": {
