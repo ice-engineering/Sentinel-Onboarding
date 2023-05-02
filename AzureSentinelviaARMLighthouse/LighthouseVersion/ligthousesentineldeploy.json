@@ -157,12 +157,19 @@
             },
             "defaultValue": false
         },
+        "enableCustomWorkbooksKind": {
+            "type": "array",
+            "metadata": {
+                "description": "List of custom DEFEND workbooks to deploy"
+            },
+            "defaultValue": []
+        },
         "_artifactsLocation": {
             "type": "string",
             "metadata": {
                 "description": "The location of resources"
             },
-            "defaultValue": "https://raw.githubusercontent.com/Shivniel/Azure/master/AzureSentinelviaARMLighthouse/"
+            "defaultValue": "https://raw.githubusercontent.com/ice-engineering/Sentinel-Onboarding/master/"
         }
     },
     "variables": {
@@ -188,7 +195,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[uri(parameters('_artifactsLocation'), 'LighthouseVersion/LinkedTemplates/workspace.json')]",
+                    "uri": "[uri(parameters('_artifactsLocation'), 'AzureSentinelviaARMLighthouse/LighthouseVersion/LinkedTemplates/workspace.json')]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -226,7 +233,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[uri(parameters('_artifactsLocation'), 'LighthouseVersion/LinkedTemplates/dataConnectors.json')]",
+                    "uri": "[uri(parameters('_artifactsLocation'), 'AzureSentinelviaARMLighthouse/LighthouseVersion/LinkedTemplates/dataConnectors.json')]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -267,7 +274,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[uri(parameters('_artifactsLocation'), 'LighthouseVersion/LinkedTemplates/alertRules.json')]",
+                    "uri": "[uri(parameters('_artifactsLocation'), 'AzureSentinelviaARMLighthouse/LighthouseVersion/LinkedTemplates/alertRules.json')]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -305,7 +312,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[uri(parameters('_artifactsLocation'), 'LighthouseVersion/LinkedTemplates/scheduledAlerts.json')]",
+                    "uri": "[uri(parameters('_artifactsLocation'), 'AzureSentinelviaARMLighthouse/LighthouseVersion/LinkedTemplates/scheduledAlerts.json')]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -356,6 +363,33 @@
                     ]
                 }
             }
+        },
+        {
+            "name": "enableCustomWorkbooksKind",
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2020-06-01",
+            "resourceGroup": "[parameters('rgName')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Resources/resourceGroups',parameters('rgName'))]"
+            ],
+            "properties": {
+                "mode": "Incremental",
+                "templateLink": {
+                    "uri": "[uri(parameters('_artifactsLocation'), 'AzureSentinelviaARMLighthouse/LighthouseVersion/LinkedTemplates/customWorkbooks.json')]",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parameters": {
+                    "workspaceName": {
+                        "value": "[parameters('workspaceName')]"
+                    },
+                    "customWorkbooksList":{
+                        "value": "[replace(replace(replace(replace(string(parameters('enableCustomWorkbooksKind')),'\"',''),'[',''),']',''),' ','` ')]"
+                    },
+                    "_artifactsLocation": {
+                        "value": "[parameters('_artifactsLocation')]"
+                    }
+                }
+            }
         }
     ],
     "outputs": {
@@ -399,6 +433,10 @@
         "dataConnectorsList": {
             "type": "string",
             "value": "[replace(replace(string(parameters('enableDataConnectorsKind')),'\"',''),'[','')]"
+        },
+        "customWorkbooksList":{
+            "type": "string",
+            "value": "[replace(replace(replace(replace(string(parameters('enableCustomWorkbooksKind')),'\"',''),'[',''),']',''),' ','` ')]"
         }
     }
 }
