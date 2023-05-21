@@ -23,10 +23,10 @@
             },
             "defaultValue": "<Enter the tenant id of the Managed Service Provider>"
         },
-        "ContributorAccessPrincipalID": {
+        "MSSentinelContributorAccessPrincipalID": {
             "type": "string"
         },
-                "ContributorAccessDisplayName": {
+                "MSSentinelContributorAccessDisplayName": {
             "type": "string"
         },
                 "ReaderAccessPrincipalID": {
@@ -397,13 +397,13 @@
             "type": "string",
             "value": "[concat('Managed by', ' ', parameters('mspOfferName'))]"
         },
-                "ContributorAccessPrincipalID": {
+                "MSSentinelContributorAccessPrincipalID": {
             "type": "string",
-            "value": "[parameters('ContributorAccessPrincipalID')]"
+            "value": "[parameters('MSSentinelContributorAccessPrincipalID')]"
         },
-                "ContributorAccessDisplayName": {
+                "MSSentinelContributorAccessDisplayName": {
             "type": "string",
-            "value": "[parameters('ContributorAccessDisplayName')]"
+            "value": "[parameters('MSSentinelContributorAccessDisplayName')]"
         },
                 "ReaderAccessPrincipalID": {
             "type": "string",
