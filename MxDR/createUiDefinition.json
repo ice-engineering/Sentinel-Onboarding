@@ -70,17 +70,17 @@
                 "visible": true
             },
             {
-                "name": "ContributorAccessPrincipalID",
+                "name": "MSSentinelContributorAccessPrincipalID",
                 "type": "Microsoft.Common.TextBox",
-                "label": "Contributor Access Principal ID",
+                "label": "MS Sentinel Contributor Access Principal ID",
                 "placeholder": "",
                 "defaultValue": "",
                 "visible": true
             },
             {
-                "name": "ContributorAccessDisplayName",
+                "name": "MSSentinelContributorAccessDisplayName",
                 "type": "Microsoft.Common.TextBox",
-                "label": "Contributor Access Display Name",
+                "label": "MS Sentinel Contributor Access Display Name",
                 "placeholder": "",
                 "defaultValue": "",
                 "visible": true
