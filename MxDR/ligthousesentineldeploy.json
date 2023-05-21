@@ -23,16 +23,16 @@
             },
             "defaultValue": "<Enter the tenant id of the Managed Service Provider>"
         },
-        "MSSentinelContributorAccessPrincipalID": {
+        "MDREngineerAccessPrincipalID": {
             "type": "string"
         },
-                "MSSentinelContributorAccessDisplayName": {
+                "MDREngineerAccessDisplayName": {
             "type": "string"
         },
-                "ReaderAccessPrincipalID": {
+                "MDRAnalystAccessPrincipalID": {
             "type": "string"
         },
-                "ReaderAccessDisplayName": {
+                "MDRAnalystAccessDisplayName": {
             "type": "string"
         },
         "authorizations": {
@@ -42,12 +42,32 @@
             },
             "defaultValue": [
                 {
-                    "principalId": "[parameters('MSSentinelContributorAccessPrincipalID')]",
-                    "principalIdDisplayName": "[parameters('MSSentinelContributorAccessDisplayName')]",
+                    "principalId": "[parameters('MDREngineerAccessPrincipalID')]",
+                    "principalIdDisplayName": "[parameters('MDREngineerAccessDisplayName')]",
                     "roleDefinitionId": "ab8e14d6-4a74-4a29-9ba8-549422addade"
                 },
+                {
+                    "principalId": "[parameters('MDREngineerAccessPrincipalID')]",
+                    "principalIdDisplayName": "[parameters('MDREngineerAccessDisplayName')]",
+                    "roleDefinitionId": "51d6186e-6489-4900-b93f-92e23144cca5"
+                },
+                {
+                    "principalId": "[parameters('MDREngineerAccessPrincipalID')]",
+                    "principalIdDisplayName": "[parameters('MDREngineerAccessDisplayName')]",
+                    "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7"
+                },
+                {
+                    "principalId": "[parameters('MDRAnalystAccessPrincipalID')]",
+                    "principalIdDisplayName": "[parameters('MDREngineerAccessDisplayName')]",
+                    "roleDefinitionId": "3e150937-b8fe-4cfb-8069-0eaf05ecd056"
+                },
+                {
+                    "principalId": "[parameters('MDRAnalystAccessPrincipalID')]",
+                    "principalIdDisplayName": "[parameters('MDREngineerAccessDisplayName')]",
+                    "roleDefinitionId": "51d6186e-6489-4900-b93f-92e23144cca5"
+                },
 {
-                    "principalId": "[parameters('ReaderAccessPrincipalID')]",
+                    "principalId": "[parameters('MDRAnalystAccessPrincipalID')]",
                     "principalIdDisplayName": "[parameters('ReaderAccessDisplayName')]",
                     "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7"
                 }              
@@ -397,19 +417,19 @@
             "type": "string",
             "value": "[concat('Managed by', ' ', parameters('mspOfferName'))]"
         },
-                "MSSentinelContributorAccessPrincipalID": {
+                "MDREngineerAccessPrincipalID": {
             "type": "string",
             "value": "[parameters('MSSentinelContributorAccessPrincipalID')]"
         },
-                "MSSentinelContributorAccessDisplayName": {
+                "MMDREngineerAccessDisplayName": {
             "type": "string",
             "value": "[parameters('MSSentinelContributorAccessDisplayName')]"
         },
-                "ReaderAccessPrincipalID": {
+                "MDRAnalystAccessPrincipalID": {
             "type": "string",
             "value": "[parameters('ReaderAccessPrincipalID')]"
         },
-                "ReaderAccessDisplayName": {
+                "MDRAnalystAccessDisplayName": {
             "type": "string",
             "value": "[parameters('ReaderAccessDisplayName')]"
         },
