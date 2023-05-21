@@ -42,9 +42,9 @@
             },
             "defaultValue": [
                 {
-                    "principalId": "[parameters('ContributorAccessPrincipalID')]",
-                    "principalIdDisplayName": "[parameters('ContributorAccessDisplayName')]",
-                    "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c"
+                    "principalId": "[parameters('MSSentinelContributorAccessPrincipalID')]",
+                    "principalIdDisplayName": "[parameters('MSSentinelContributorAccessDisplayName')]",
+                    "roleDefinitionId": "ab8e14d6-4a74-4a29-9ba8-549422addade"
                 },
 {
                     "principalId": "[parameters('ReaderAccessPrincipalID')]",
