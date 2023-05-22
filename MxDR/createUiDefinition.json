@@ -70,33 +70,33 @@
                 "visible": true
             },
             {
-                "name": "MSSentinelContributorAccessPrincipalID",
+                "name": "MDREngineerAccessPrincipalID",
                 "type": "Microsoft.Common.TextBox",
-                "label": "MS Sentinel Contributor Access Principal ID",
+                "label": "MDR Engineer Access Principal ID",
                 "placeholder": "",
                 "defaultValue": "",
                 "visible": true
             },
             {
-                "name": "MSSentinelContributorAccessDisplayName",
+                "name": "MDREngineerAccessDisplayName",
                 "type": "Microsoft.Common.TextBox",
-                "label": "MS Sentinel Contributor Access Display Name",
+                "label": "MDR Engineer Access Display Name",
                 "placeholder": "",
                 "defaultValue": "",
                 "visible": true
             },
             {
-                "name": "ReaderAccessPrincipalID",
+                "name": "MDRAnalystAccessPrincipalID",
                 "type": "Microsoft.Common.TextBox",
-                "label": "Reader Access Principal ID",
+                "label": "MDR Analyst Principal ID",
                 "placeholder": "",
                 "defaultValue": "",
                 "visible": true
             },
             {
-                "name": "ReaderAccessDisplayName",
+                "name": "MDRAnalystAccessDisplayName",
                 "type": "Microsoft.Common.TextBox",
-                "label": "Reader Access Display Name",
+                "label": "MDR Analyst Display Name",
                 "placeholder": "",
                 "defaultValue": "",
                 "visible": true
@@ -343,10 +343,10 @@
             "mspOfferName": "[basics('mspOfferName')]",
             "mspOfferDescription": "[basics('mspOfferDescription')]",
             "managedByTenantId": "[basics('managedByTenantId')]",
-            "MSSentinelContributorAccessPrincipalID": "[basics('MSSentinelContributorAccessPrincipalID')]",
-            "MSSentinelContributorAccessDisplayName": "[basics('MSSentinelContributorAccessDisplayName')]",
-            "ReaderAccessPrincipalID": "[basics('ReaderAccessPrincipalID')]",
-            "ReaderAccessDisplayName": "[basics('ReaderAccessDisplayName')]",
+            "MDREngineerAccessPrincipalID": "[basics('MDREngineerAccessPrincipalID')]",
+            "MDREngineerAccessDisplayName": "[basics('MDREngineerAccessDisplayName')]",
+            "MDRAnalystAccessPrincipalID": "[basics('MDRAnalystAccessPrincipalID')]",
+            "MDRAnalystAccessDisplayName": "[basics('MDRAnalystAccessDisplayName')]",
             "dailyQuota": "[basics('dailyQuota')]",
             "dataRetention": "[basics('dataRetention')]",
             "enableDataConnectorsKind": "[steps('dataConnectors').enableDataConnectorsKind]",
