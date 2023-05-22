@@ -419,15 +419,15 @@
         },
                 "MDREngineerAccessPrincipalID": {
             "type": "string",
-            "value": "[parameters('MSSentinelContributorAccessPrincipalID')]"
+            "value": "[parameters('MDREngineerAccessPrincipalID')]"
         },
                 "MMDREngineerAccessDisplayName": {
             "type": "string",
-            "value": "[parameters('MSSentinelContributorAccessDisplayName')]"
+            "value": "[parameters('MDREngineerAccessDisplayName')]"
         },
                 "MDRAnalystAccessPrincipalID": {
             "type": "string",
-            "value": "[parameters('ReaderAccessPrincipalID')]"
+            "value": "[parameters('MDRAnalystAccessPrincipalID')]"
         },
                 "MDRAnalystAccessDisplayName": {
             "type": "string",
