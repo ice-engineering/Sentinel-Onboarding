@@ -68,7 +68,7 @@
                 },
 {
                     "principalId": "[parameters('MDRAnalystAccessPrincipalID')]",
-                    "principalIdDisplayName": "[parameters('ReaderAccessDisplayName')]",
+                    "principalIdDisplayName": "[parameters('MDRAnalystAccessDisplayName')]",
                     "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7"
                 }              
             ]
@@ -431,7 +431,7 @@
         },
                 "MDRAnalystAccessDisplayName": {
             "type": "string",
-            "value": "[parameters('ReaderAccessDisplayName')]"
+            "value": "[parameters('MDRAnalystAccessDisplayName')]"
         },
 
                 "mspOfferDescription": {
