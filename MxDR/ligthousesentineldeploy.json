@@ -58,12 +58,12 @@
                 },
                 {
                     "principalId": "[parameters('MDRAnalystAccessPrincipalID')]",
-                    "principalIdDisplayName": "[parameters('MDREngineerAccessDisplayName')]",
+                    "principalIdDisplayName": "[parameters('MDRAnalystAccessDisplayName')]",
                     "roleDefinitionId": "3e150937-b8fe-4cfb-8069-0eaf05ecd056"
                 },
                 {
                     "principalId": "[parameters('MDRAnalystAccessPrincipalID')]",
-                    "principalIdDisplayName": "[parameters('MDREngineerAccessDisplayName')]",
+                    "principalIdDisplayName": "[parameters('MDRAnalystAccessDisplayName')]",
                     "roleDefinitionId": "51d6186e-6489-4900-b93f-92e23144cca5"
                 },
 {
