@@ -57,6 +57,11 @@
                     "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7"
                 },
                 {
+                    "principalId": "[parameters('MDREngineerAccessPrincipalID')]",
+                    "principalIdDisplayName": "[parameters('MDREngineerAccessDisplayName')]",
+                    "roleDefinitionId": "87a39d53-fc1b-424a-814c-f7e04687dc9e"
+                },
+                {
                     "principalId": "[parameters('MDRAnalystAccessPrincipalID')]",
                     "principalIdDisplayName": "[parameters('MDRAnalystAccessDisplayName')]",
                     "roleDefinitionId": "3e150937-b8fe-4cfb-8069-0eaf05ecd056"
